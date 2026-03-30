@@ -1,0 +1,330 @@
+/* Global responsive guards */
+html,
+body {
+  overflow-x: clip;
+}
+
+body {
+  min-width: 320px;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+.main-layout,
+.navbar,
+.footer-inner,
+.footer-divider,
+.hero-grid > *,
+.recommendation-layout > * {
+  min-width: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ultra-wide displays */
+@media (min-width: 1600px) {
+  .main-layout,
+  .navbar,
+  .footer-inner,
+  .footer-divider {
+    width: min(1320px, calc(100% - 72px));
+  }
+}
+
+/* Laptop / tablet */
+@media (max-width: 1024px) {
+  .main-layout,
+  .navbar,
+  .footer-inner,
+  .footer-divider {
+    width: min(1120px, calc(100% - 36px));
+  }
+
+  .live-camera-card {
+    min-height: auto;
+  }
+
+  .camera-stage {
+    height: auto;
+    aspect-ratio: 16 / 10;
+    min-height: 248px;
+  }
+
+  .modal-card {
+    max-height: 88vh;
+    overflow: auto;
+  }
+}
+
+/* Tablet and below */
+@media (max-width: 768px) {
+  .main-layout,
+  .navbar,
+  .footer-inner,
+  .footer-divider {
+    width: calc(100% - 24px);
+  }
+
+  .main-layout {
+    margin-top: 14px;
+    padding-bottom: 22px;
+  }
+
+  .navbar {
+    height: auto;
+    padding: 12px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .brand {
+    min-height: 40px;
+  }
+
+  .brand-text {
+    font-size: 1rem;
+  }
+
+  .mobile-nav-icon {
+    display: none !important;
+  }
+
+  .nav-links {
+    display: grid !important;
+    width: 100%;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .nav-links button {
+    min-height: 40px;
+    padding: 9px 8px;
+    font-size: 0.84rem;
+    line-height: 1.2;
+    justify-content: center;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .hero-text-card,
+  .live-camera-card,
+  .recommendation-card {
+    padding: 14px;
+  }
+
+  .recommendation-form,
+  .recommendation-results,
+  .face-summary,
+  .hairstyle-library {
+    padding: 12px;
+  }
+
+  .hero-badge {
+    max-width: 100%;
+    white-space: normal;
+    line-height: 1.35;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .hero-text-card h1 {
+    margin-top: 14px;
+  }
+
+  .hero-actions {
+    margin-top: 18px;
+    gap: 10px;
+  }
+
+  .primary-cta {
+    padding: 11px 16px;
+  }
+
+  .live-camera-head {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .live-camera-head h2 {
+    font-size: 1rem;
+  }
+
+  .mode-toggle-wrap {
+    width: 100%;
+  }
+
+  .mode-toggle-wrap button {
+    flex: 1;
+    justify-content: center;
+    min-height: 38px;
+  }
+
+  .camera-stage {
+    min-height: 224px;
+  }
+
+  .camera-controls {
+    gap: 8px;
+  }
+
+  .control-btn {
+    flex: 1 1 calc(50% - 4px);
+    min-width: 0;
+    justify-content: center;
+    padding: 9px 10px;
+    text-align: center;
+  }
+
+  .image-file-chip {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .camera-overlay-state span {
+    max-width: calc(100% - 20px);
+    text-align: center;
+  }
+
+  .face-summary-head {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .detection-pill {
+    max-width: 100%;
+    white-space: normal;
+    line-height: 1.3;
+  }
+
+  .face-summary-notice {
+    align-items: flex-start;
+  }
+
+  .recommendation-form button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hairstyle-library-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-wrap {
+    margin-top: 26px;
+    padding-bottom: 20px;
+  }
+
+  .footer-col {
+    padding: 14px;
+  }
+
+  .footer-col p {
+    align-items: flex-start;
+    line-height: 1.45;
+  }
+
+  .modal-overlay {
+    padding: 12px;
+  }
+
+  .modal-card {
+    border-radius: 16px;
+    padding: 16px;
+  }
+
+  .modal-header h3 {
+    font-size: 1.08rem;
+  }
+
+  .modal-body,
+  .modal-steps {
+    font-size: 0.95rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 520px) {
+  .main-layout,
+  .navbar,
+  .footer-inner,
+  .footer-divider {
+    width: calc(100% - 18px);
+  }
+
+  .nav-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nav-links .start-pill {
+    grid-column: span 2;
+  }
+
+  .camera-stage {
+    min-height: 206px;
+  }
+
+  .control-btn {
+    flex: 1 1 100%;
+  }
+
+  .result-card h4 {
+    font-size: 1.02rem;
+  }
+
+  .hairstyle-library-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hairstyle-library-card {
+    gap: 7px;
+  }
+}
+
+/* Extra-small devices */
+@media (max-width: 380px) {
+  .main-layout,
+  .navbar,
+  .footer-inner,
+  .footer-divider {
+    width: calc(100% - 12px);
+  }
+
+  .hero-text-card,
+  .live-camera-card,
+  .recommendation-card {
+    padding: 12px;
+  }
+
+  .recommendation-form,
+  .recommendation-results,
+  .face-summary,
+  .hairstyle-library {
+    padding: 10px;
+  }
+
+  .nav-links button,
+  .control-btn,
+  .recommendation-form button {
+    min-height: 38px;
+    font-size: 0.82rem;
+  }
+
+  .hero-text-card h1 {
+    font-size: 1.7rem;
+  }
+
+  .camera-stage {
+    min-height: 196px;
+  }
+
+  .modal-card {
+    padding: 14px;
+  }
+}

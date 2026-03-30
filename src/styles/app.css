@@ -1,0 +1,17 @@
+.app-shell {
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+.main-layout {
+  width: min(1120px, calc(100% - 48px));
+  margin: 32px auto 0;
+  padding-bottom: 32px;
+}
+
+@media (max-width: 768px) {
+  .main-layout {
+    width: calc(100% - 28px);
+    margin-top: 18px;
+  }
+}
